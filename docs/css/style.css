@@ -1,0 +1,439 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/* work_box_info font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* 광준의날 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* 리듬폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
+/* MYSB */
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+/* 매칸토시 */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+body {
+/* font-family */
+	background-color: rgba(0,0,0,0.43);
+/* 	display: flex;
+	align-items : center;
+	justify-content: center;
+	height: 100vh; */
+	overflow-x : hidden;
+}
+img {
+/* 화질개선	*/
+	image-rendering: optimize-contrast;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+/* library */
+.bd {
+	border: 2px solid black;
+}
+.bd2 {
+	border: 2px solid red;
+}
+.bd3 {
+	border: 2px solid green;
+}
+.bd4 {
+	border: 2px solid blue;
+}
+.bd5 {
+	border: 2px solid purple;
+}
+
+.con {
+	max-width : var(--con-width);
+	margin: 0 auto;
+}
+
+/* custom */
+:root {
+	--con-width : 1200px ;
+	--body-bgc : #fff ;
+	--bd-color : rgba(0,0,0,.1);
+	--bd-width : 0px;
+}
+
+
+.top_bar {
+	position: fixed;
+	left : 50%;
+	top : 0;
+	transform : translatex(-50%);
+	width : 800px;
+	height : 100px;
+	border: 1px solid rgba(255,255,255,.15);
+	border-radius : 0px 0px 50px 50px;
+	background-color: rgba(255,255,255,0.09);
+	backdrop-filter: blur(3px);
+	z-index : 2;
+	box-shadow : 5px 0px 15px rgba(0,0,0,0.1);
+	transition : height 1s;
+	
+}
+.top_bar:hover {
+	height : 500px;
+}
+.top_bar_logo {
+	font-family: 'Libre Baskerville', serif;
+	font-size : 3rem;
+	white-space : nowrap;
+  position: absolute;
+	left:50%;
+	transform : translatex(-50%);
+  bottom : 400px;
+	color : rgba(255,255,255,.3);
+	-webkit-text-stroke: 1px rgba(255,255,255,.4);
+	text-shadow : 0px 0px 5px rgba(0,0,0,.3)
+}
+
+.Block_bundle {
+	display: flex;
+}
+
+.Block {
+	overflow : hidden;
+	position: relative;
+	background-color: #adadad;
+	width : 50%;
+	height : 50vh;
+	box-shadow :
+		1px 1px 3px rgba(0,0,0,.3),
+		inset -6px -6px 7px rgba(0,0,0,.1),
+		inset 6px 6px 7px rgba(255,255,255,.1);
+	margin : 2px;
+}
+
+.block1 {
+	border-right: var(--bd-width) solid var(--bd-color);
+	border-bottom: var(--bd-width) solid var(--bd-color);
+}
+
+.block2 {
+	border-bottom: var(--bd-width) solid var(--bd-color);
+}
+
+.block_circle {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius : 50%;
+	background-color: #91908f;
+	box-shadow :
+		inset -1px 1px 2px rgba(0,0,0,0.4),
+		inset 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.circle1 {
+	left : 30px;
+	top : 30px;
+}
+.circle2 {
+	right : 30px;
+	top : 30px;
+}
+.circle3 {
+	left : 30px;
+	bottom : 30px;
+}
+.circle4 {
+	right : 30px;
+	bottom : 30px;
+}
+
+.background_texture {
+	width: 100%;
+	height: 150%;
+	 background-image: url(https://i.pinimg.com/564x/a2/38/2c/a2382c2c9581bb70e96d6eb4a545c4d7.jpg);
+  background-repeat: repeat;
+	background-size : contain;
+	opacity:.3;
+}
+
+.texture2 {
+	transform : rotate(180deg);
+}
+
+
+
+.works_box {
+	position: absolute;
+	width: 140px;
+	height: 600px;
+	left : 110px;
+	z-index : 1;
+	border: 1px solid rgba(255,255,255,.15);
+	border-radius : 50px;
+	background-color: rgba(255,255,255,0.15);
+	backdrop-filter: blur(3px);
+	box-shadow : 5px 0px 15px rgba(0,0,0,0.1);
+	transition : width 1s ; 
+	overflow : hidden;
+}
+
+.works_box:hover {
+	width : 1700px;
+}
+
+.Work_box_info {
+	font-family: 'Manrope', sans-serif;
+	position: absolute;
+	left : 110px;
+	top : 100px;
+	width : 0px;
+	height: 300px;
+	overflow : hidden;
+	white-space : nowrap;
+	font-size : 1.5rem;
+	transition : width .4s .6s;
+}
+.works_box:hover > .Work_box_info {
+	
+	width : 400px;
+}
+
+.Work_box_info > p {
+	position: relative;
+}
+.Work_box_info > p:after {
+	content : "";
+	position: absolute;
+	width : 380px;
+	height : 1.5px;
+	background-color: rgba(0,0,0,.15);
+	left : 0;
+	bottom : -2px;
+}
+
+.works_logo {
+	transform-origin : left bottom;
+	transition : transform 1s;
+}.works_box:hover > .works_logo {
+	transform : rotate(360deg);
+}
+
+.works_box1 {
+	top : 200px;
+}
+.Bell_logo {
+	position: absolute;
+	font-family: 'Montserrat', sans-serif;
+	color : #cf0526;
+	font-size : 3rem;
+	transform : rotate(270deg);
+	white-space : nowrap;
+	bottom : 110px;
+	left : 110px;
+}
+.Bell_logo2 {
+	font-family: 'Montserrat', sans-serif;
+	color : #cf0526;
+}
+
+
+
+.works_box2 {
+	top : 900px;
+}
+.neu_logo {
+	position: absolute;
+	font-family: "Alfa Slab One", serif;
+	color : rgba(0,0,0,0.7);
+	font-size : 2.3rem;
+	transform : rotate(270deg);
+	white-space : nowrap;
+	bottom : 110px;
+	left : 110px;
+	letter-spacing: 5px;
+}
+
+.works_box3 {
+	top : 1600px;
+}
+.WHW_logo {
+	position: absolute;
+	font-family: 'Kanit', sans-serif;
+	color : rgba(0,0,0,0.7);
+	font-size : 3.5rem;
+	transform : rotate(270deg);
+	white-space : nowrap;
+	bottom : 110px;
+	left : 115px;
+}
+
+.works_box4 {
+	top : 2300px;
+}
+.UJIN_logo {
+	position: absolute;
+	font-family: 'Archivo Black', sans-serif;
+	color : transparent;
+	font-size : 3.8rem;
+	transform : rotate(270deg);
+	white-space : nowrap;
+	bottom : 120px;
+	left : 115px;
+	animation : UJIN_Logo infinite 10s both;
+}
+
+@keyframes UJIN_Logo {
+	0% {
+		text-shadow:0px 0px 1.5px rgba(61,107,72);
+	}
+	14.285% {
+		text-shadow:0px 0px 1.5px rgba(61,107,107);
+	}
+	28.57% {
+		text-shadow:0px 0px 1.5px rgba(62,62,107);
+	}
+	42.855% {
+		text-shadow:0px 0px 1.5px rgba(107,62,107);
+	}
+	57.14% {
+		text-shadow:0px 0px 1.5px rgba(107,62,62);
+	}
+	71.425% {
+		text-shadow:0px 0px 1.5px rgba(107,62,62);
+	}
+	85.71% {
+		text-shadow:0px 0px 1.5px rgba(107,107,62);
+	}
+	100% {
+		text-shadow:0px 0px 1.5px rgba(61,107,72);
+	}
+}
+
+
+.img_box {
+	position: absolute;
+	width : 1000px;
+	height : 500px;
+	background-color: black;
+	left : 600px;
+	top : 50px;
+	border-radius : 50px;
+	box-shadow : 
+		0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.Bell_img_box {
+	background-image: url(https://url.kr/ijrp9s); }
+
+	
+.neu_img_box {
+		background-image: url(https://ifh.cc/g/rhTwmw.png); }
+
+
+.WHW_img_box {
+		background-image: url(https://ifh.cc/g/6cTP7n.png); }
+
+.UJIN_img_box {
+		background-image: url(https://ifh.cc/g/mt8kXV.png); }
+
+.other_works_box_benner {
+	position: absolute;
+	top : 3200px;
+	left : 50%;
+	transform : translatex(-50%);
+	width : 1500px;
+	height : 400px;
+	z-index : 9;
+}
+
+.other_works_box {
+	position: absolute;
+	width: 600px;
+	height: 140px;
+	z-index : 1;
+	border: 1px solid rgba(255,255,255,.15);
+	border-radius : 50px;
+	background-color: rgba(255,255,255,0.15);
+	backdrop-filter: blur(3px);
+	box-shadow : 5px 0px 15px rgba(0,0,0,0.1);
+	transition : height 1s ; 
+	overflow : hidden;
+}
+.other_works_box a {
+	position: absolute;
+	white-space : nowrap;
+	left : 50%;
+	transform : translatex(-50%);
+	top : 40px;
+}
+.other_works_box::after {
+	content : "";
+	font-family: 'Manrope', sans-serif;
+	position: absolute;
+	left : 50%;
+	transform : translatex(-50%);
+	bottom : 10px;
+	opacity : 0;
+	transition : opacity .3s;
+}
+.other_works_box:hover {
+	height : 200px;
+}
+
+.other_works_box:hover::after {
+	opacity : 1;
+}
+
+.Japan_works_box{
+	left : 0;
+	top : 0;
+	font-family: "Bebas Neue", "GmarketSansMedium";
+}
+.Japan_works_box::after{
+	content : "2023 / 10 / 20 D+48";
+}
+.Japan_works_box a {
+	text-transform : uppercase;
+	color : #e41a22;
+	font-size : 2.7rem;
+}
+
+.Rhythm_works_box{
+	font-family: "Heebo", sans-serif;
+	right : 0;
+	top: 0;
+}
+.Rhythm_works_box::after{
+	content : "2023 / 11 / 08 D+66";
+}
+.Rhythm_works_box a {
+	font-size : 2.7rem;
+}
+
+.MYSB_works_box{
+	left : 0;
+	bottom : 0;
+	font-family: "Monoton", sans-serif;
+}
+.MYSB_works_box::after{
+	content : "2023 / 11 / 14 D+72";
+}
+.MYSB_works_box a {
+	font-size : 4.2rem;
+	top : 20px;
+}
+
+
+.Mac_works_box{
+	right : 0;
+	bottom : 0;
+	font-family: 'Libre Baskerville', serif;
+}
+.Mac_works_box::after{
+	content : "2023 / 11 / 16 D+74";
+}
+.Mac_works_box a {
+	font-size : 2.3rem;
+	font-weight : bold;
+}
